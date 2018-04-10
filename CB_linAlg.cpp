@@ -1,8 +1,8 @@
 #include <iostream>
 using namespace std;
 //Se declara funcion que multiplique dos matrices que entran por parametro, además, se especifican las dimensiones de las matrices, en donde x1, y1 son las dimensiones x,y de la primera matriz, y x2,y2, seran las dimensiones de la segunda matriz.
-double** matrix_product(double** mat1 int x1 int y1 double** mat2 int x2 int y2);
-double** get_Matrix(int M int N);
+double** matrix_product(double** mat1, int x1, int y1, double** mat2, int x2, int y2);
+double** get_Matrix(int M, int N);
 
 int main()
 {
@@ -29,19 +29,11 @@ int main()
 		cout << "Se esta inicializando la matriz B " << endl;
 		double** B = get_Matrix(X2, Y2);
 	}
-	mat[i][j] = elemento;
-	// Matriz de y2,x1 componentes
-	double **mat = new double*[x1];
-	// Se inicializan los componetes de la matriz
-	for (int i = 0; i < x1; i++)
-	{
-		mat[i] = new double[y2];
-	}
 
 	return 0;
 }
 
-double** matrix_product(double** mat1 int x1 int y1 double** mat2 int x2 int y2)
+double** matrix_product(double** mat1, int x1, int y1, double** mat2, int x2, int y2)
 { 
 	// Matriz de y2,x1 componentes
 	double **mat = new double*[x1];
@@ -65,7 +57,7 @@ double** matrix_product(double** mat1 int x1 int y1 double** mat2 int x2 int y2)
 	return mat;
 }
 
-double** get_Matrix(int M int N)
+double** get_Matrix(int M, int N)
 {
 	// Variable de entrada por medio de la consola
 	double elemento;
