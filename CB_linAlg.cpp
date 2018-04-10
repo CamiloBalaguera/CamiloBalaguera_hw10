@@ -28,8 +28,18 @@ int main()
 		double** A = get_Matrix(X1, Y1);
 		cout << "Se esta inicializando la matriz B " << endl;
 		double** B = get_Matrix(X2, Y2);
+		double** R = matrix_product(A, X1, Y1, B, X2, Y2);
+		// Se imprime la matriz resultado.
+		cout << "Esta es la matriz resultado" << endl;
+		for (int i = 0; i < X1; i++)		
+			{
+				for (int j = 0; j < Y2; j++)
+				{
+					cout << R[i][j] << " ";
+				}
+			cout << endl;
+			}
 	}
-
 	return 0;
 }
 
