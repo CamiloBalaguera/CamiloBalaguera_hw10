@@ -6,6 +6,38 @@ double** get_Matrix(int M int N);
 
 int main()
 {
+	int X1;
+	int Y1;
+	int X2;
+	int Y2;
+	cout << "Ingrese la dimensión X de A:" << endl;
+	cin >> X1;
+	cout << "Ingrese la dimensión Y de A:" << endl;
+	cin >> Y1;
+	cout << "Ingrese la dimensión X de B:" << endl;
+	cin >> X2;
+	cout << "Ingrese la dimensión Y de B:" << endl;
+	cin >> Y2;
+	if (X2 != Y1)
+	{
+		cout << "La segunda dimension de A no es igual a la primera dimension de B" << endl;
+	}
+	else
+	{
+		cout << "Se esta inicializando la matriz A " << endl;
+		double** A = get_Matrix(X1, Y1);
+		cout << "Se esta inicializando la matriz B " << endl;
+		double** B = get_Matrix(X2, Y2);
+	}
+	mat[i][j] = elemento;
+	// Matriz de y2,x1 componentes
+	double **mat = new double*[x1];
+	// Se inicializan los componetes de la matriz
+	for (int i = 0; i < x1; i++)
+	{
+		mat[i] = new double[y2];
+	}
+
 	return 0;
 }
 
@@ -56,6 +88,7 @@ double** get_Matrix(int M int N)
 		}
 
 	// Se imprime la matriz resultante.
+	cout << "Esta es la matriz resultante" << endl;
 	for (int i = 0; i < M; i++)		
 		{
 			for (int j = 0; j < N; j++)
