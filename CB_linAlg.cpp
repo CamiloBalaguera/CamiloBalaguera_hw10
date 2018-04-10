@@ -6,25 +6,6 @@ double** get_Matrix(int M int N);
 
 int main()
 {
-	// Esto es un vector de 10 componentes
-	double *a = new double[10];
-	
-	double **mat = new double*[4];
-
-	for (int i = 0; i < 4; i++)
-	{
-		mat[i] = new double[5];
-	}
-
-	for (int i = 0; i < 4; i++)
-	{
-		for (int j = 0; j < 5; j++)
-			{	
-				mat[i][j] = i*j;
-				cout << mat[i][j] << " ";
-			}
-		cout << endl;
-	}
 	return 0;
 }
 
